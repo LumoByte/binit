@@ -13,8 +13,8 @@ class BinningUtilityFeatureTest extends TestCase
     /** @test */
     public function it_works_when_capitalization_is_mixed()
     {
-        $equalFrequency = $this->artisan('binning equaL-FREQuency 0.1 0.5 1.0 2.3 2.5 3.2')->run();
-        $equalWidth = $this->artisan('binning eQuAl-WiDtH 0.1 0.5 1.0 2.3 2.5 3.2')->run();
+        $equalFrequency = $this->artisan('discretize equaL-FREQuency 0.1 0.5 1.0 2.3 2.5 3.2')->run();
+        $equalWidth = $this->artisan('discretize eQuAl-WiDtH 0.1 0.5 1.0 2.3 2.5 3.2')->run();
         
         // Assert function works without erroring
         $this->assertEquals(0, $equalWidth);
