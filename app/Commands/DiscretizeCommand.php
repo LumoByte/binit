@@ -31,7 +31,10 @@ class DiscretizeCommand extends Command
     {
         // Gather the input
         $rawAlgorithm = $this->argument('algorithm');
-        $algorithm = strtolower(preg_replace('/[^A-Za-z0-9\-]/', '', $rawAlgorithm)); // remove special chars & lowercase everything
+        
+        // remove special chars & lowercase the input
+        $algorithm = strtolower(preg_replace('/[^A-Za-z0-9\-]/', '', $rawAlgorithm));
+
         $data = $this->argument('data');
         
         // Three bins: High, Medium, Low
@@ -56,8 +59,8 @@ class DiscretizeCommand extends Command
         }
 
         // Print the binning output
-        $this->info('Low: ' . $bins[0]);
-        $this->info('Medium: ' . $bins[1]);
-        $this->info('High: ' . $bins[2]);
+        $this->info("Low: {$bins[0]}");
+        $this->info("Medium: {$bins[1]}");
+        $this->info("High: {$bins[2]}");
     }
 }

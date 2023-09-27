@@ -31,7 +31,7 @@ class InspireCommand extends Command
             <div class="py-1 ml-2">
                 <div class="px-1 bg-blue-500 text-black">LumoByte</div>
                 <em class="ml-1">
-                  Let's develop sophisticated apps - together!
+                  Let's make sophisticated apps together!
                 </em>
             </div>
         HTML);
